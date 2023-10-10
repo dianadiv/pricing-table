@@ -187,6 +187,7 @@ label {
   height: 40px;
   width: 90px;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 .plan__button:hover {
   cursor: pointer;
