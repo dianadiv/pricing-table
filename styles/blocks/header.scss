@@ -1,0 +1,9 @@
+.header{
+    padding: $blocks-paddings;
+
+    border-bottom: 2px solid $primary-color;
+
+    &__title {
+        text-align: center;
+    }
+}

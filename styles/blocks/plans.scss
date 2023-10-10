@@ -1,0 +1,101 @@
+.plans-container {
+    width: 80%;
+    padding: $blocks-paddings;
+    margin-top: $blocks-paddings;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    gap: $blocks-paddings;
+    align-items: center;
+
+    width: 30%;
+    min-width: 240px;
+    padding: 10px;
+    background-color: $background-cards;
+    border-radius: $border-radius;
+    transition: $transition;
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0px 0px 20px -3px $primary-color;
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        border: 2px solid $primary-color;
+        border-radius: 50%;
+
+        background-image: url('../../pictures/icon.png');
+        background-size: contain;
+
+        position: relative;
+        top: -20px;
+    }
+
+    &__title {
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $primary-color; 
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        padding-bottom: 5px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $primary-color; 
+            transition: $transition;
+            transform: scaleX(0)
+        }
+
+        &:hover {
+            &::after {
+                transform: scaleX(1)
+            } 
+        }
+    }
+
+    &__button{
+        border: 1px solid $primary-color;
+        border-radius: $border-radius;
+        background-color: $primary-color;
+        transition: $transition;
+        height: 40px;
+        width: 90px;
+
+        font-size: 16px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 20px -3px black;
+        }
+    }
+
+    &__price{
+        
+        &__amount {
+            font-weight: bold;
+            font-size: 32px;
+            color: $primary-color;
+        }
+    }
+}

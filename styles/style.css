@@ -1,0 +1,192 @@
+html {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+textarea,
+input {
+  font-family: "Poppins", "Arial", sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 20px;
+  border-bottom: 2px solid #4160ff;
+}
+.header__title {
+  text-align: center;
+}
+
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__title {
+  margin: 20px;
+}
+.main__subtitle {
+  color: #808080;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #424242;
+}
+
+.btn-period-mode-switch {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+.btn-period-mode-switch > label.btn-period-mode-switch-inner {
+  margin: 0px;
+  width: 140px;
+  height: 30px;
+  background: #E0E0E0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 20px -3px #4160ff;
+  display: block;
+}
+.btn-period-mode-switch > label.btn-period-mode-switch-inner:before {
+  content: attr(data-on);
+  position: absolute;
+  top: 7px;
+  right: 20px;
+}
+.btn-period-mode-switch > label.btn-period-mode-switch-inner:after {
+  content: attr(data-off);
+  width: 70px;
+  height: 16px;
+  background: #fff;
+  border-radius: 15px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 5px 0px;
+}
+.btn-period-mode-switch input[type=checkbox] {
+  width: 50px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+.btn-period-mode-switch input[type=checkbox]:checked + label.btn-period-mode-switch-inner:after {
+  content: attr(data-on);
+  left: 68px;
+}
+.btn-period-mode-switch input[type=checkbox]:checked + label.btn-period-mode-switch-inner:before {
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+
+
+.plans-container {
+  width: 80%;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 30%;
+  min-width: 240px;
+  padding: 10px;
+  background-color: #f2f6ff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.plan:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px -3px #4160ff;
+}
+.plan__icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #4160ff;
+  border-radius: 50%;
+  background-image: url("../../pictures/icon.png");
+  background-size: contain;
+  position: relative;
+  top: -20px;
+}
+.plan__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4160ff;
+}
+.plan__list {
+  list-style: none;
+}
+.plan__item {
+  padding-bottom: 5px;
+}
+.plan__item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #4160ff;
+  transition: all 0.3s ease;
+  transform: scaleX(0);
+}
+.plan__item:hover::after {
+  transform: scaleX(1);
+}
+.plan__button {
+  border: 1px solid #4160ff;
+  border-radius: 15px;
+  background-color: #4160ff;
+  transition: all 0.3s ease;
+  height: 40px;
+  width: 90px;
+  font-size: 16px;
+}
+.plan__button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px -3px black;
+}
+.plan__price__amount {
+  font-weight: bold;
+  font-size: 32px;
+  color: #4160ff;
+}
+
+/*# sourceMappingURL=style.css.map */
