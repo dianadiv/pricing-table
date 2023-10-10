@@ -1,26 +1,26 @@
 html {
-    font-family: "Poppins", "Arial", sans-serif;
-    font-size: $title-text-size;
-    font-weight: 500;
-    scroll-behavior: smooth;
-  }
-  
-  textarea,
-  input {
-    font-family: "Poppins", "Arial", sans-serif;
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  ul {
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Poppins', 'Arial', sans-serif;
+  font-size: $title-text-size;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+textarea,
+input {
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}

@@ -1,15 +1,13 @@
 .main {
+    @include pageFlex;
+
     padding: $blocks-paddings;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__title{
+    &__title {
         margin: $blocks-paddings;
     }
 
-    &__subtitle{
+    &__subtitle {
         color: $subtitle-color;
         margin-bottom: $blocks-paddings;
     }

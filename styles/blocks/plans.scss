@@ -2,63 +2,67 @@
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(0);
     }
 }
 
 .plans-container {
-    width: 80%;
-    padding: $blocks-paddings;
-    margin-top: $blocks-paddings;
-
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 5px;
+
+    width: 80%;
+    padding: $blocks-paddings;
+    margin-top: $blocks-paddings;
 }
 
 
 .plan {
-    display: flex;
-    flex-direction: column;
+    @include pageFlex;
     gap: $blocks-paddings;
-    align-items: center;
 
     width: 30%;
     min-width: 240px;
     padding: 10px;
+
     background-color: $background-cards;
     border-radius: $border-radius;
-    transition: $transition;
 
-    animation: slideInFromLeft 0.5s ease forwards;  
+    transition: $transition;
+    animation: slideInFromLeft 0.5s ease forwards;
 
     &:hover {
-        background-color: #fff;
+        background-color: $background-ligth;
         box-shadow: 0px 0px 20px -3px $primary-color;
     }
 
     &__icon {
+        position: relative;
+        top: -20px;
+
         width: 50px;
         height: 50px;
+
         border: 2px solid $primary-color;
         border-radius: 50%;
 
         background-image: url('../pictures/icon.png');
         background-size: contain;
 
-        position: relative;
-        top: -20px;
     }
 
     &__title {
         &::after {
             content: '';
             display: block;
+
             width: 100%;
             height: 2px;
-            background-color: $primary-color; 
+
+            background-color: $primary-color;
         }
     }
 
@@ -72,9 +76,11 @@
         &::after {
             content: '';
             display: block;
+
             width: 100%;
             height: 1px;
-            background-color: $primary-color; 
+
+            background-color: $primary-color;
             transition: $transition;
             transform: scaleX(0)
         }
@@ -82,21 +88,22 @@
         &:hover {
             &::after {
                 transform: scaleX(1)
-            } 
+            }
         }
     }
 
-    &__button{
+    &__button {
+        font-size: 16px;
+
+        height: 40px;
+        width: 90px;
+        margin-bottom: $blocks-paddings;
+
         border: 1px solid $primary-color;
         border-radius: $border-radius;
         background-color: $primary-color;
+
         transition: $transition;
-        height: 40px;
-        width: 90px;
-
-        font-size: 16px;
-
-        margin-bottom: $blocks-paddings;
 
         &:hover {
             cursor: pointer;
@@ -104,11 +111,11 @@
         }
     }
 
-    &__price{
-        
+    &__price {
         &__amount {
             font-weight: bold;
             font-size: 32px;
+
             color: $primary-color;
         }
     }
