@@ -155,6 +155,29 @@ label {
   height: 2px;
   background-color: #4160ff;
 }
+.plan__features {
+  position: relative;
+}
+.plan__features::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  width: 40px;
+  height: 1px;
+  background-color: #4160ff;
+  left: -45px;
+}
+.plan__features::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  width: 40px;
+  height: 1px;
+  background-color: #4160ff;
+  right: -45px;
+}
 .plan__list {
   list-style: none;
 }
@@ -176,16 +199,17 @@ label {
 .plan__button {
   font-size: 16px;
   height: 40px;
-  width: 90px;
+  width: 35%;
   margin-bottom: 20px;
   border: 1px solid #4160ff;
-  border-radius: 15px;
+  border-radius: 0 15px;
   background-color: #4160ff;
   transition: all 0.3s ease;
 }
 .plan__button:hover {
   cursor: pointer;
   box-shadow: 0px 0px 20px -3px black;
+  border-radius: 15px;
 }
 .plan__price__amount {
   font-weight: bold;

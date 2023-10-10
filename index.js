@@ -68,16 +68,22 @@ function updatePrices() {
 
         if (yearPeriod) {
             planPriceAmount.textContent = plan['monthly-price'] + ' $'; 
-            planPricePeriod.textContent = ' by month';
+            planPricePeriod.textContent = ' per month';
         } else {
             planPriceAmount.textContent = plan['annual-price'] + ' $'; 
-            planPricePeriod.textContent = ' by year';
+            planPricePeriod.textContent = ' per year';
         }
 
         planPrice.appendChild(planPriceAmount);
         planPrice.appendChild(planPricePeriod);
     
         planContainer.appendChild(planPrice);
+
+        const featuresTitle = document.createElement("p");
+        featuresTitle.textContent = 'Features'
+        featuresTitle.classList.add('plan__features');
+
+        planContainer.appendChild(featuresTitle);
     
         const featuresList = document.createElement("ul");
         featuresList.classList.add('plan__list')
@@ -85,7 +91,7 @@ function updatePrices() {
         for (var feature in plan.features) {
             const featureItem = document.createElement("li");
             featureItem.classList.add('plan__item')
-            featureItem.textContent = ((plan.features[feature] ? '✔' : '✘' ) + feature);
+            featureItem.textContent = ((plan.features[feature] ? '✔ ' : '✘ ' ) + feature);
             featuresList.appendChild(featureItem);
         }
     

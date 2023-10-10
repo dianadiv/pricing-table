@@ -1,5 +1,18 @@
 @mixin pageFlex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin textLine {
+  content: '';
+  display: block;
+  
+  position: absolute;
+  top: 49%;
+
+  width: 40px;
+  height: 1px;
+
+  background-color: $primary-color;
 }
