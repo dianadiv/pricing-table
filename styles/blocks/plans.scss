@@ -1,3 +1,12 @@
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .plans-container {
     width: 80%;
     padding: $blocks-paddings;
@@ -8,6 +17,7 @@
     flex-wrap: wrap;
     gap: 5px;
 }
+
 
 .plan {
     display: flex;
@@ -22,6 +32,8 @@
     border-radius: $border-radius;
     transition: $transition;
 
+    animation: slideInFromLeft 0.5s ease forwards;  
+
     &:hover {
         background-color: #fff;
         box-shadow: 0px 0px 20px -3px $primary-color;
@@ -33,7 +45,7 @@
         border: 2px solid $primary-color;
         border-radius: 50%;
 
-        background-image: url('../../pictures/icon.png');
+        background-image: url('../pictures/icon.png');
         background-size: contain;
 
         position: relative;

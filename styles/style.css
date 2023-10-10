@@ -109,6 +109,14 @@ label {
 }
 
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .plans-container {
   width: 80%;
   padding: 20px;
@@ -130,6 +138,7 @@ label {
   background-color: #f2f6ff;
   border-radius: 15px;
   transition: all 0.3s ease;
+  animation: slideInFromLeft 0.5s ease forwards;
 }
 .plan:hover {
   background-color: #fff;
@@ -140,7 +149,7 @@ label {
   height: 50px;
   border: 2px solid #4160ff;
   border-radius: 50%;
-  background-image: url("../../pictures/icon.png");
+  background-image: url("../pictures/icon.png");
   background-size: contain;
   position: relative;
   top: -20px;
