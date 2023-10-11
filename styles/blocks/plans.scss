@@ -12,13 +12,23 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 15px;
 
-    width: 80%;
-    padding: $blocks-paddings;
+    width: 100%;
     margin-top: $blocks-paddings;
-}
+    padding-block: $blocks-paddings;
 
+    @media (max-width: 1180px) {
+        gap: 0;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: auto;
+    }
+}
 
 .plan {
     @include pageFlex;
@@ -43,15 +53,14 @@
         position: relative;
         top: -20px;
 
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
 
         border: 2px solid $primary-color;
         border-radius: 50%;
 
         background-image: url('../pictures/icon.png');
         background-size: contain;
-
     }
 
     &__title {
@@ -70,7 +79,7 @@
         position: relative;
 
         &::after {
-            @include textLine; 
+            @include textLine;
             left: -45px;
         }
 
@@ -96,12 +105,12 @@
 
             background-color: $primary-color;
             transition: $transition;
-            transform: scaleX(0)
+            transform: scaleX(0);
         }
 
         &:hover {
             &::after {
-                transform: scaleX(1)
+                transform: scaleX(1);
             }
         }
     }
@@ -121,8 +130,12 @@
 
         &:hover {
             cursor: pointer;
-            box-shadow: 0px 0px 20px -3px black;
+            box-shadow: 0px 0px 20px -3px $primary-color;
             border-radius: $border-radius;
+        }
+
+        &:active {
+            background-color: $background-ligth;
         }
     }
 
@@ -133,5 +146,9 @@
 
             color: $primary-color;
         }
+    }
+
+    @media (max-width: 900px) {
+        width: 50%;
     }
 }

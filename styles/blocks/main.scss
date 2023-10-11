@@ -1,7 +1,8 @@
 .main {
     @include pageFlex;
 
-    padding: $blocks-paddings;
+    width: 90%;
+    margin: auto;
 
     &__title {
         margin: $blocks-paddings;
